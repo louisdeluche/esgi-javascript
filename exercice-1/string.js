@@ -26,10 +26,10 @@ else return '';
 
 function camelCase(str) {
     if (typeof str === 'string' || str instanceof String){
-        return str.replace(/\W+(.)/g, function(match, chr)
-        {
-            return chr.toUpperCase();
-        });
+        return str
+            .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+            .replace(/\s/g, '')
+            .replace(/^(.)/, function($1) { return $1.toLowerCase(); });
     }
     else return '';
 
