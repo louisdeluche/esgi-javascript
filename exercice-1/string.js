@@ -95,28 +95,28 @@ function yoda(str) {
     else return '';
 }
 
-// function vig(str, key) {
-//     if (typeof str === 'string' || str instanceof String){
-//
-//     let output = "";
-//     for (let i = 0, j = 0; i < str.length; i++) {
-//         let c = str.charCodeAt(i);
-//         //uppercase
-//         if (65 <= c && c <= 90) {
-//             output += String.fromCharCode((c - 65 + key[j % key.length]) % 26 + 65);
-//             j++;
-//         //lowercase
-//         } else if (97 <= c && c <= 122) {
-//             output += String.fromCharCode((c - 97 + key[j % key.length]) % 26 + 97);
-//             j++;
-//         } else {
-//             output += str.charAt(i);
-//         }
-//     }
-//     return output;
-//     }
-//     else return '';
-// }
+function vig(str, key) {
+    // if (typeof str === 'string' || str instanceof String){
+    //
+    // let output = "";
+    // for (let i = 0, j = 0; i < str.length; i++) {
+    //     let c = str.charCodeAt(i);
+    //     //uppercase
+    //     if (65 <= c && c <= 90) {
+    //         output += String.fromCharCode((c - 65 + key[j % key.length]) % 26 + 65);
+    //         j++;
+    //     //lowercase
+    //     } else if (97 <= c && c <= 122) {
+    //         output += String.fromCharCode((c - 97 + key[j % key.length]) % 26 + 97);
+    //         j++;
+    //     } else {
+    //         output += str.charAt(i);
+    //     }
+    // }
+    // return output;
+    // }
+    // else return '';
+}
 
 
 // console.log(ucfirst("hello world"));
