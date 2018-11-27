@@ -79,6 +79,22 @@ function prop_access (obj, url){
     else return '';
 }
 
+
+// prop_acces partie prof
+// function prop_access(input, path){
+//     var pathArray = path.split(".");
+//     for(var i = 0; i < pathArray.length; i++){
+//         if(input[pathArray[i]] === undefined){
+//             console.error('path exist');
+//             return null;
+//         }
+//         input = input[pathArray[i]];
+//     }
+//     return input;
+// }
+
+
+
 function verlan(str) {
     if (typeof str === 'string' || str instanceof String){
 
