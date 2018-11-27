@@ -24,14 +24,15 @@ function capitalize(str) {
 else return '';
 }
 
-function camelCase(str) {
-    if (typeof str === 'string' || str instanceof String){
-        return text.replace(/^([A-Z])|[\s-_]+(\w)/g, function(match, p1, p2, offset) {
-            if (p2) return p2.toUpperCase();
-            return p1.toLowerCase();
+function camelCase(string) {
+    let data = "";
+    if(typeof string === "string") {
+        let stringSplit = string.split(" ");
+        for (let i = 0; i < stringSplit.length; i++) {
+            data += stringSplit[i].charAt(0).toUpperCase() + stringSplit[i].slice(1);
         }
-    else return '';
-
+    }
+    return data;
 }
 
 function snake_case(str) {
@@ -118,12 +119,12 @@ function vig(str, key) {
 }
 
 
-// console.log(ucfirst("hello world"));
-// console.log(capitalize("hello world"));
-// console.log(camelCase("hello world"));
-// console.log(snake_case("hello world"));
-// console.log(leet("aeyuoi"));
-// console.log(verlan("hello world"));
-// console.log(yoda("hello world"));
-// console.log(prop_access(obj,url));
-// console.log(prop_access(obj,url));
+console.log(ucfirst("hello world"));
+console.log(capitalize("hello world"));
+console.log(camelCase("hello world"));
+console.log(snake_case("hello world"));
+console.log(leet("aeyuoi"));
+console.log(verlan("hello world"));
+console.log(yoda("hello world"));
+console.log(prop_access(obj,url));
+console.log(prop_access(obj,url));
