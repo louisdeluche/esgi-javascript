@@ -12,8 +12,16 @@ function type_check_v2(value, obj){
             bool = false;
         }
         if (obj.hasOwnProperty("value")){
-            if (value !== obj.value){
-                bool = false;
+            if (type_check_v1(value, "object")) {
+                if (!(JSON.stringify(value) == JSON.stringify(obj.value))){
+                    bool = false;
+                }
+            }else{
+
+                if (value !== obj.value){
+                    bool = false;
+
+                }
             }
         }
     }
@@ -31,7 +39,9 @@ function type_check_v3(){
 
 
 // console.log(type_check_v1(null, "null"));
+
 console.log(type_check_v2({prop1: 1}, {type: "object"}));
 console.log(type_check_v2("foo", {type: "string", value: "foo"}));
 console.log(type_check_v2("foo", {type: "string", value: "bar"}));
 console.log(type_check_v2(3, {enum: ["foo","bar",3]}));
+console.log(type_check_v2({prop1: 1}, {type: "object", value: {prop1: 1}}));
